@@ -1,0 +1,6 @@
+<div>
+    {{kids}}
+    <table>
+    <tr ng-repeat="kid in kids | orderBy:'last'" ><td>{{kid.first}}</td><td>{{kid.last}}</td></tr>
+	</table>
+</div>
