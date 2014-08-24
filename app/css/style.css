@@ -1,0 +1,43 @@
+html, body {
+	background:#2a343d;
+	color:#fff;
+}
+
+header {
+	height: 50px;
+	background:rgba(255,255,255,.95);
+	color:#2a343d;
+}
+
+header img {
+	height:50px;
+	padding:10px 12px 10px 0;
+	vertical-align: top;
+	border-right:1px solid #2a343d;
+	float:left;
+}
+
+header h1 {
+	display: inline-block;
+	font-weight: 200;
+	font-size:26px;
+	line-height:50px;
+	margin:0;
+	margin-left:15px;
+	float: left;
+	vertical-align: top;
+}
+
+.search {
+	display: inline-block;
+	width:300px;
+	margin:0;
+	height:50px;
+	padding:8px 0 8px 15px;
+	float:right;
+}
+
+.search .glyphicon {
+	top:0;
+	color:#2a343d;
+}

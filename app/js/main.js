@@ -13,7 +13,6 @@
     return dataFactory;
   });
 
-  // Set up configuration to switch between In and Out
   app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -25,7 +24,6 @@
       });
   });
 
-  // The main controller for Sign In
   app.controller('InCtrl', 
     function($scope, dataFactory) {
       $scope.kids = dataFactory.kids();
