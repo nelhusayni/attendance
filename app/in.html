@@ -1,6 +1,7 @@
 <div>
-    {{kids}}
-    <table>
-    <tr ng-repeat="kid in kids | orderBy:'last' | filter:search" ><td>{{kid.first}}</td><td>{{kid.last}}</td></tr>
-	</table>
+    <div class="col-sm-6" ng-repeat="kid in kids | orderBy:'last' | filter:search">
+    	<span class="btn btn-primary kid" ng-click="toggle(kid, 'in')">
+			<span id="first">{{kid.$id}}<br />{{kid.first}}</span><br /><span id="last">{{kid.last}}</span>
+    	</span>
+    </div>
 </div>
