@@ -19,6 +19,10 @@
       (exists(id)) ? kids.$remove(id+"/"+session) : kids.$update(id, wrapper);
     }
 
+    dataFactory.isSignedIn = function(id) {
+      return exists(id);
+    }
+
     function exists(id) {
       return kids.$asArray().$getRecord(id)[session];
     }
@@ -46,6 +50,10 @@
         var time = {};
         time[type] = new Date().toTimeString();
         dataFactory.toggle(kid, type, time);
+      }
+
+      $scope.isSignedIn = function(kid) {
+        return dataFactory.isSignedIn(kid.$id);
       }
 
     }

@@ -1,7 +1,12 @@
 <div>
-    <div class="col-sm-6" ng-repeat="kid in kids | orderBy:'last' | filter:search">
-    	<span class="btn btn-primary kid" ng-click="toggle(kid, 'in')">
-			<span id="first">{{kid.$id}}<br />{{kid.first}}</span><br /><span id="last">{{kid.last}}</span>
+    <div class="col-sm-3" ng-repeat="kid in kids | orderBy:'last' | filter:search">
+    	<span class="btn btn-{{isSignedIn(kid) ? 'success' : 'warning'}} kid" ng-click="toggle(kid, 'in')">
+    		<span class="glyphicon glyphicon-{{isSignedIn(kid) ? 'ok' : 'remove'}} fix-center"></span>
+			<div class="text-left">
+				<span id="first">{{kid.first}}</span>
+				<br />
+				<span id="last">{{kid.last}}</span>
+			</div>
     	</span>
     </div>
 </div>
